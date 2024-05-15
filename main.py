@@ -9,6 +9,9 @@ app = FastAPI(
     description="Management of students and their courses"
 )
 
+@app.get("/")
+def home():
+    return "Welcome to Fast Api Project"
 
 app.include_router(users.router)
 app.include_router(sections.router)
